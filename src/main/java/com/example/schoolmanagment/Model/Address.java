@@ -16,17 +16,10 @@ public class Address {
     @Id
     private Integer id;
 
-    @NotEmpty(message = "Area can't be empty")
-    @Column(columnDefinition = "varchar(30) not null")
     private String area;
 
-    @NotEmpty(message = "Street can't be empty")
-    @Column(columnDefinition = "varchar(50) not null")
     private String street;
 
-    @NotNull(message = "Building number can't be null")
-    @Positive(message = "Building number must be greater than 0")
-    @Column(columnDefinition = "int not null")
     private Integer buildingNumber;
 
     @OneToOne
